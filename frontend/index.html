@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veg</title>
+  <script src="https://unpkg.com/d3@5.6.0/dist/d3.min.js" defer></script>
+
+  <script src="https://d3js.org/d3-queue.v3.min.js"></script>    <!-- need this to use d3.queue() in app.js -->
+
+  <script src="../public/bundle.js" defer></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- <svg width="960" height="500"></svg> -->
+    <div id='main'>
+      <h1 id='title'>United States Educational Attainment</h1>
+      <div id='description'>Percentage of adults age 25 and older with a bachelor's degree or higher (2010-2014)</div>
+      <svg width="960" height="600"></svg>
+      <div id='source'>Source: <a
+          href='https://www.ers.usda.gov/data-products/county-level-data-sets/download-data.aspx'>USDA Economic Research
+          Service</a></div>
+    </div>
+</body>
+</html>

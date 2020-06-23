@@ -1,0 +1,21 @@
+/* body {
+  margin: 0px;
+  overflow: hidden;
+  background-color: darkblue;
+}
+
+path {
+  fill: lightgreen;
+  stroke: black;
+  stroke-opacity: 0.1;
+} */
+
+/* body {
+  background-image: radial-gradient
+} */
+
+
+
+path:hover {
+  fill: blue;
+}
