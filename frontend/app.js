@@ -19,9 +19,9 @@
 
 import {select, json, geoPath, csv} from 'd3';
 import {feature} from 'topojson';
+import {csvParse} from 'd3-dsv';
 
-
-csv('./restaurants.csv', function(data) {
+d3.csv('restaurants.csv').get(function(error, data) {
   console.log(data)
 })
 
