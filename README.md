@@ -1,6 +1,4 @@
 # veg
-
-Proposal:
 * Veg offers insight into the most veg-friendly areas of the United States.
 * A choropleth map reflects the number of restaurants with veg options in each state
 
