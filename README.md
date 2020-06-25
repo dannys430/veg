@@ -10,15 +10,12 @@ Proposal:
 * Veg uses vanilla js, d3.js, topojson, html, and css.
 
 # timeline
+
 ## day 1:
 * research and data sourcing
 * git repo and file structure
-
-## day 2:
-* using choropleth to accurately shade states based on number of veg friendly establishments
-
-## day 3:
+* mapping data points
 * css styling
 
 ## bonus:
-* distance slider showing how many establishments within radius
+* mapping data for each county in the United States
