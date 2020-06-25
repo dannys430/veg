@@ -15,12 +15,14 @@ path {
 } */
 
 
-path:hover {
+/* path:hover {
   fill: blue;
-}
+} */
 
 
-/* body {
+
+
+body {
   background-image: radial-gradient( circle 879px at 10.4% 22.3%,  rgba(255,235,238,1) 0%, rgba(186,190,245,1) 93.6% );
   display: flex;
   align-items: center;
@@ -69,4 +71,4 @@ svg {
   position: absolute;
   top: 20px;
   right: 110px;
-} */
+}

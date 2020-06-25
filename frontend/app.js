@@ -138,6 +138,12 @@
 import {feature} from 'topojson'
 import {select, geoPath, min, max, scaleThreshold, range, schemePurples, schemeGreens, csv, json} from 'd3'
 
+const tooltip = document.getElementById('tooltip');
+const width = 960;
+const height = 600;
+const svg = select('#container').append('svg')
+  .attr('width', width)
+  .attr('height', height);
 
 // function run() {
   
@@ -244,7 +250,7 @@ import {select, geoPath, min, max, scaleThreshold, range, schemePurples, schemeG
 
     const path = geoPath()
 
-    const svg = select('svg');
+    // const svg = select('svg');
 
     // const color = d3.scaleThreshold()
     //   .domain([.2, .9, 1.5, 3.5, 10, 20, 100, 300, 600])
@@ -265,22 +271,36 @@ import {select, geoPath, min, max, scaleThreshold, range, schemePurples, schemeG
     //   .domain([0, 1])
     //   .range(["red", "white", "green"]);
 
-    svg.selectAll('path')
+    svg.append('g')
+      .selectAll('path')
+    // svg.selectAll('path')
       // .data(counties)
       .data(state)
       .enter()
       .append('path')
+      .attr('class', 'county')
       // .attr('fill', 'red')
       // .attr('fill', d => colorsScale(educations.find(edu => edu.fips === d.id).bachelorsOrHigher))
       // .attr('fill', d => colorsScale(countsArr.find(el => Number(el.id) === Number(d.id))))
       .attr('fill', d => colorsScale(countsArr.find(el => Number(el.id) === Number(d.id))['num']))
-
-                                                      //  objArr.find(el => el.id === 24)[Object.getOwnPropertyNames(objArr[0])[0]]
-
+      
       .attr('d', path)
-      // .attr("fill", color(1))
+      .on('mouseover', (d, i) => {
+      const { coordinates } = d.geometry;
+      const [x, y] = coordinates[0][0];
+   
+      tooltip.classList.add('show');
+      tooltip.style.left = x - 50 + 'px';
+      tooltip.style.top = y - 50 + 'px';
+      
+      const counts = countsArr.find(el => Number(el.id) === Number(d.id))['num'];
 
-    
+      tooltip.innerHTML = `
+        <p>Veg Restaurants - ${counts}</p>
+      `;
+    }).on('mouseout', () => {
+      tooltip.classList.remove('show');
+    });
 
 
   })
