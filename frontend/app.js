@@ -140,68 +140,63 @@ import {select, geoPath, min, max, scaleThreshold, range, schemePurples, schemeG
 
 
 // function run() {
-
+  
   // const counts = {
-  //   'AL': 0,'AK': 0,'AZ': 0,'AR': 0,'CA': 0,'CO': 0,'CT': 0,'DE': 0,'FL': 0,'GA': 0,'HI': 0,'ID': 0,'IL': 0,'IN': 0,'IA': 0,'KS': 0,'KY': 0,'LA': 0,'ME': 0,'MD': 0,'MA': 0,'MI': 0,'MN': 0,'MS': 0,'MO': 0,'MT': 0,'NE': 0,'NV': 0,'NH': 0,'NJ': 0,'NM': 0,'NY': 0,'NC': 0,'ND': 0,'OH': 0,'OK': 0,'OR': 0,'PA': 0,'RI': 0,'SC': 0,'SD': 0,'TN': 0,'TX': 0,'UT': 0,'VT': 0,'VA': 0,'WA': 0,'WV': 0,'WI': 0,'WY': 0,'DC': 0
-  // }
+    //   'AL': 0,'AK': 0,'AZ': 0,'AR': 0,'CA': 0,'CO': 0,'CT': 0,'DE': 0,'FL': 0,'GA': 0,'HI': 0,'ID': 0,'IL': 0,'IN': 0,'IA': 0,'KS': 0,'KY': 0,'LA': 0,'ME': 0,'MD': 0,'MA': 0,'MI': 0,'MN': 0,'MS': 0,'MO': 0,'MT': 0,'NE': 0,'NV': 0,'NH': 0,'NJ': 0,'NM': 0,'NY': 0,'NC': 0,'ND': 0,'OH': 0,'OK': 0,'OR': 0,'PA': 0,'RI': 0,'SC': 0,'SD': 0,'TN': 0,'TX': 0,'UT': 0,'VT': 0,'VA': 0,'WA': 0,'WV': 0,'WI': 0,'WY': 0,'DC': 0
+    // }
   const countsArr = [
-    { 'AL': 0, 'id': 0, 'num': 42},
-    { 'AK': 0, 'id': 1, 'num': 24},
-    { 'AZ': 0, 'id': 2, 'num': 63},
-    { 'AR': 0, 'id': 3, 'num': 34},
-    { 'CA': 0, 'id': 4, 'num': 23},
-    { 'CO': 0, 'id': 5, 'num': 12},
-    { 'CT': 0, 'id': 6, 'num': 43},
-    { 'DE': 0, 'id': 7, 'num': 47},
-    { 'FL': 0, 'id': 8, 'num': 32},
-    { 'GA': 0, 'id': 9, 'num': 33},
-    { 'HI': 0, 'id': 10, 'num': 25},
-    { 'ID': 0, 'id': 11, 'num': 33},
-    { 'IL': 0, 'id': 12, 'num': 2},
-    { 'IN': 0, 'id': 13, 'num': 7},
-    { 'IA': 0, 'id': 14, 'num': 38},
-    { 'KS': 0, 'id': 15, 'num': 37},
-    { 'KY': 0, 'id': 16, 'num': 35},
-    { 'LA': 0, 'id': 17, 'num': 34},
-    { 'ME': 0, 'id': 18, 'num': 34},
-    { 'MD': 0, 'id': 19, 'num': 44},
-    { 'MA': 0, 'id': 20, 'num': 14},
-    { 'MI': 0, 'id': 21, 'num': 42},
-    { 'MN': 0, 'id': 22, 'num': 12},
-    { 'MS': 0, 'id': 23, 'num': 34},
-    { 'MO': 0, 'id': 24, 'num': 32},
-    { 'MT': 0, 'id': 25, 'num': 31},
-    { 'NE': 0, 'id': 26, 'num': 14},
-    { 'NV': 0, 'id': 27, 'num': 14},
-    { 'NH': 0, 'id': 28, 'num': 26},
-    { 'NJ': 0, 'id': 29, 'num': 34},
-    { 'NM': 0, 'id': 30, 'num': 36},
-    { 'NY': 0, 'id': 31, 'num': 36},
-    { 'NC': 0, 'id': 32, 'num': 36},
-    { 'ND': 0, 'id': 33, 'num': 30},
-    { 'OH': 0, 'id': 34, 'num': 33},
-    { 'OK': 0, 'id': 35, 'num': 22},
-    { 'OR': 0, 'id': 36, 'num': 11},
-    { 'PA': 0, 'id': 37, 'num': 44},
-    { 'RI': 0, 'id': 38, 'num': 35},
-    { 'SC': 0, 'id': 39, 'num': 36},
-    { 'SD': 0, 'id': 40, 'num': 37},
-    { 'TN': 0, 'id': 41, 'num': 23},
-    { 'TX': 0, 'id': 42, 'num': 34},
-    { 'UT': 0, 'id': 43, 'num': 35},
-    { 'VT': 0, 'id': 44, 'num': 36},
-    { 'VA': 0, 'id': 45, 'num': 37},
-    { 'WA': 0, 'id': 46, 'num': 38},
-    { 'WV': 0, 'id': 47, 'num': 39},
-    { 'WI': 0, 'id': 48, 'num': 30},
-    { 'WY': 0, 'id': 49, 'num': 10},
-    { 'DC': 0, 'id': 50, 'num': 12},
-    { 'aDC': 0, 'id': 51, 'num': 13},
-    { 'aDC': 0, 'id': 52, 'num': 13},
-    { 'aDC': 0, 'id': 53, 'num': 13},
-    { 'aDC': 0, 'id': 54, 'num': 13},
-    { 'aDC': 0, 'id': 55, 'num': 13},
-    { 'aDC': 0, 'id': 56, 'num': 13},
+    { 'AL': 0, 'id': 1, 'num': 144},
+    { 'AK': 0, 'id': 2, 'num': 38},
+    { 'AZ': 0, 'id': 4, 'num': 322},
+    { 'AR': 0, 'id': 5, 'num': 163},
+    { 'CA': 0, 'id': 6, 'num': 2787},
+    { 'CO': 0, 'id': 8, 'num': 412},
+    { 'CT': 0, 'id': 9, 'num': 170},
+    { 'DE': 0, 'id': 10, 'num': 42},
+    { 'DC': 0, 'id': 11, 'num': 117},
+    { 'FL': 0, 'id': 12, 'num': 1129},
+    { 'GA': 0, 'id': 13, 'num': 498},
+    { 'HI': 0, 'id': 15, 'num': 177},
+    { 'ID': 0, 'id': 16, 'num': 55},
+    { 'IL': 0, 'id': 17, 'num': 620},
+    { 'IN': 0, 'id': 18, 'num': 228},
+    { 'IA': 0, 'id': 19, 'num': 172},
+    { 'KS': 0, 'id': 20, 'num': 70},
+    { 'KY': 0, 'id': 21, 'num': 137},
+    { 'LA': 0, 'id': 22, 'num': 204},
+    { 'ME': 0, 'id': 23, 'num': 135},
+    { 'MD': 0, 'id': 24, 'num': 330},
+    { 'MA': 0, 'id': 25, 'num': 445},
+    { 'MI': 0, 'id': 26, 'num': 476},
+    { 'MN': 0, 'id': 27, 'num': 236},
+    { 'MS': 0, 'id': 28, 'num': 84},
+    { 'MO': 0, 'id': 29, 'num': 270},
+    { 'MT': 0, 'id': 30, 'num': 49},
+    { 'NE': 0, 'id': 31, 'num': 76},
+    { 'NV': 0, 'id': 32, 'num': 169},
+    { 'NH': 0, 'id': 33, 'num': 83},
+    { 'NJ': 0, 'id': 34, 'num': 424},
+    { 'NM': 0, 'id': 35, 'num': 180},
+    { 'NY': 0, 'id': 36, 'num': 1533},
+    { 'NC': 0, 'id': 37, 'num': 382},
+    { 'ND': 0, 'id': 38, 'num': 31},
+    { 'OH': 0, 'id': 39, 'num': 568},
+    { 'OK': 0, 'id': 40, 'num': 176},
+    { 'OR': 0, 'id': 41, 'num': 464},
+    { 'PA': 0, 'id': 42, 'num': 704},
+    { 'RI': 0, 'id': 44, 'num': 44},
+    { 'SC': 0, 'id': 45, 'num': 161},
+    { 'SD': 0, 'id': 46, 'num': 31},
+    { 'TN': 0, 'id': 47, 'num': 292},
+    { 'TX': 0, 'id': 48, 'num': 1255},
+    { 'UT': 0, 'id': 49, 'num': 193},
+    { 'VT': 0, 'id': 50, 'num': 64},
+    { 'VA': 0, 'id': 51, 'num': 340},
+    { 'WA': 0, 'id': 53, 'num': 558},
+    { 'WV': 0, 'id': 54, 'num': 87},
+    { 'WI': 0, 'id': 55, 'num': 246},
+    { 'WY': 0, 'id': 56, 'num': 42},
+    
 
   ]
 
@@ -257,9 +252,9 @@ import {select, geoPath, min, max, scaleThreshold, range, schemePurples, schemeG
 
     // const min = Math.min(...Object.values(counts))
     // const max = Math.max(...Object.values(counts))
-    const min = d3.min(countsArr, el => el.id)
-    const max = d3.max(countsArr, el => el.id)
-    const step = (max - min) / 8
+    const min = d3.min(countsArr, el => el.num)
+    const max = d3.max(countsArr, el => el.num)
+    const step = (max - min) / 30
 
     const colorsScale = d3.scaleThreshold()
       .domain(range(min, max, step))
