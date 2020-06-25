@@ -1,13 +1,13 @@
 # veg
 
 Proposal:
-* Veg offers insight into the most veg-friendly metropolitan areas in the country.
-* A choropleth map shows the densest areas of available veg options, categorized by county.
+* Veg offers insight into the most veg-friendly areas of the United States.
+* A choropleth map reflects the number of restaurants with veg options in each state
 
 ![](./choropleth.png)
 
 # technologies used
-* Veg uses d3.js, html, and css.
+* Veg uses vanilla js, d3.js, topojson, html, and css.
 
 # timeline
 ## day 1:
@@ -15,8 +15,10 @@ Proposal:
 * git repo and file structure
 
 ## day 2:
-* using choropleth to accurately shade state counties based on number of veg friendly establishments
+* using choropleth to accurately shade states based on number of veg friendly establishments
 
 ## day 3:
-* distance slider showing how many establishments within radius
 * css styling
+
+## bonus:
+* distance slider showing how many establishments within radius
