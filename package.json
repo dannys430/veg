@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
     "start": "webpack --watch"
   },
   "author": "",
@@ -14,11 +14,13 @@
     "babel": "^6.23.0",
     "d3": "^5.16.0",
     "d3-dsv": "^1.2.0",
+    "express": "^4.17.1",
     "topojson": "^3.0.2",
     "us-counties": "^1.2.1",
     "webpack": "^4.43.0"
   },
   "devDependencies": {
+    "nodemon": "^2.0.4",
     "webpack-cli": "^3.3.12"
   }
 }
