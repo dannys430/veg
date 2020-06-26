@@ -9,62 +9,63 @@ const svg = select('#container').append('svg')
   .attr('height', height);
 
   const countsArr = [
-    { 'AL': 0, 'id': 1, 'num': 144},
-    { 'AK': 0, 'id': 2, 'num': 38},
-    { 'AZ': 0, 'id': 4, 'num': 322},
-    { 'AR': 0, 'id': 5, 'num': 163},
-    { 'CA': 0, 'id': 6, 'num': 2787},
-    { 'CO': 0, 'id': 8, 'num': 412},
-    { 'CT': 0, 'id': 9, 'num': 170},
-    { 'DE': 0, 'id': 10, 'num': 42},
-    { 'DC': 0, 'id': 11, 'num': 117},
-    { 'FL': 0, 'id': 12, 'num': 1129},
-    { 'GA': 0, 'id': 13, 'num': 498},
-    { 'HI': 0, 'id': 15, 'num': 177},
-    { 'ID': 0, 'id': 16, 'num': 55},
-    { 'IL': 0, 'id': 17, 'num': 620},
-    { 'IN': 0, 'id': 18, 'num': 228},
-    { 'IA': 0, 'id': 19, 'num': 172},
-    { 'KS': 0, 'id': 20, 'num': 70},
-    { 'KY': 0, 'id': 21, 'num': 137},
-    { 'LA': 0, 'id': 22, 'num': 204},
-    { 'ME': 0, 'id': 23, 'num': 135},
-    { 'MD': 0, 'id': 24, 'num': 330},
-    { 'MA': 0, 'id': 25, 'num': 445},
-    { 'MI': 0, 'id': 26, 'num': 476},
-    { 'MN': 0, 'id': 27, 'num': 236},
-    { 'MS': 0, 'id': 28, 'num': 84},
-    { 'MO': 0, 'id': 29, 'num': 270},
-    { 'MT': 0, 'id': 30, 'num': 49},
-    { 'NE': 0, 'id': 31, 'num': 76},
-    { 'NV': 0, 'id': 32, 'num': 169},
-    { 'NH': 0, 'id': 33, 'num': 83},
-    { 'NJ': 0, 'id': 34, 'num': 424},
-    { 'NM': 0, 'id': 35, 'num': 180},
-    { 'NY': 0, 'id': 36, 'num': 1533},
-    { 'NC': 0, 'id': 37, 'num': 382},
-    { 'ND': 0, 'id': 38, 'num': 31},
-    { 'OH': 0, 'id': 39, 'num': 568},
-    { 'OK': 0, 'id': 40, 'num': 176},
-    { 'OR': 0, 'id': 41, 'num': 464},
-    { 'PA': 0, 'id': 42, 'num': 704},
-    { 'RI': 0, 'id': 44, 'num': 44},
-    { 'SC': 0, 'id': 45, 'num': 161},
-    { 'SD': 0, 'id': 46, 'num': 31},
-    { 'TN': 0, 'id': 47, 'num': 292},
-    { 'TX': 0, 'id': 48, 'num': 1255},
-    { 'UT': 0, 'id': 49, 'num': 193},
-    { 'VT': 0, 'id': 50, 'num': 64},
-    { 'VA': 0, 'id': 51, 'num': 340},
-    { 'WA': 0, 'id': 53, 'num': 558},
-    { 'WV': 0, 'id': 54, 'num': 87},
-    { 'WI': 0, 'id': 55, 'num': 246},
-    { 'WY': 0, 'id': 56, 'num': 42},
+    { 'AL': 0, 'id': 1, 'state': 'Alabama','num': 144},
+    { 'AK': 0, 'id': 2, 'state': 'Alaska','num': 38},
+    { 'AZ': 0, 'id': 4, 'state': 'Arizona','num': 322},
+    { 'AR': 0, 'id': 5, 'state': 'Arkansas','num': 163},
+    { 'CA': 0, 'id': 6, 'state': 'California','num': 2787},
+    { 'CO': 0, 'id': 8, 'state': 'Colorado','num': 412},
+    { 'CT': 0, 'id': 9, 'state': 'Connecticut','num': 170},
+    { 'DE': 0, 'id': 10, 'state': 'Delaware','num': 42},
+    { 'DC': 0, 'id': 11, 'state': 'District of Columbia','num': 117},
+    { 'FL': 0, 'id': 12, 'state': 'Florida','num': 1129},
+    { 'GA': 0, 'id': 13, 'state': 'Georgia','num': 498},
+    { 'HI': 0, 'id': 15, 'state': 'Hawaii','num': 177},
+    { 'ID': 0, 'id': 16, 'state': 'Idaho','num': 55},
+    { 'IL': 0, 'id': 17, 'state': 'Illinois','num': 620},
+    { 'IN': 0, 'id': 18, 'state': 'Indiana','num': 228},
+    { 'IA': 0, 'id': 19, 'state': 'Iowa','num': 172},
+    { 'KS': 0, 'id': 20, 'state': 'Kansas','num': 70},
+    { 'KY': 0, 'id': 21, 'state': 'Kentucky','num': 137},
+    { 'LA': 0, 'id': 22, 'state': 'Louisiana','num': 204},
+    { 'ME': 0, 'id': 23, 'state': 'Maine','num': 135},
+    { 'MD': 0, 'id': 24, 'state': 'Maryland','num': 330},
+    { 'MA': 0, 'id': 25, 'state': 'Massachusetts','num': 445},
+    { 'MI': 0, 'id': 26, 'state': 'Michigan','num': 476},
+    { 'MN': 0, 'id': 27, 'state': 'Minnesota','num': 236},
+    { 'MS': 0, 'id': 28, 'state': 'Mississippi','num': 84},
+    { 'MO': 0, 'id': 29, 'state': 'Misouri','num': 270},
+    { 'MT': 0, 'id': 30, 'state': 'Montana','num': 49},
+    { 'NE': 0, 'id': 31, 'state': 'Nebraska','num': 76},
+    { 'NV': 0, 'id': 32, 'state': 'Nevada','num': 169},
+    { 'NH': 0, 'id': 33, 'state': 'New Hampshire','num': 83},
+    { 'NJ': 0, 'id': 34, 'state': 'New Jersey','num': 424},
+    { 'NM': 0, 'id': 35, 'state': 'New Mexico','num': 180},
+    { 'NY': 0, 'id': 36, 'state': 'New York','num': 1533},
+    { 'NC': 0, 'id': 37, 'state': 'North Carolina','num': 382},
+    { 'ND': 0, 'id': 38, 'state': 'North Dakota','num': 31},
+    { 'OH': 0, 'id': 39, 'state': 'Ohio','num': 568},
+    { 'OK': 0, 'id': 40, 'state': 'Oklahoma','num': 176},
+    { 'OR': 0, 'id': 41, 'state': 'Oregon','num': 464},
+    { 'PA': 0, 'id': 42, 'state': 'Pennsylvania','num': 704},
+    { 'RI': 0, 'id': 44, 'state': 'Rhode Island','num': 44},
+    { 'SC': 0, 'id': 45, 'state': 'South Carolina','num': 161},
+    { 'SD': 0, 'id': 46, 'state': 'South Dakota','num': 31},
+    { 'TN': 0, 'id': 47, 'state': 'Tennessee','num': 292},
+    { 'TX': 0, 'id': 48, 'state': 'Texas','num': 1255},
+    { 'UT': 0, 'id': 49, 'state': 'Utah','num': 193},
+    { 'VT': 0, 'id': 50, 'state': 'Vermont','num': 64},
+    { 'VA': 0, 'id': 51, 'state': 'Virginia','num': 340},
+    { 'WA': 0, 'id': 53, 'state': 'Washington','num': 558},
+    { 'WV': 0, 'id': 54, 'state': 'West Virginia','num': 87},
+    { 'WI': 0, 'id': 55, 'state': 'Wisconsin','num': 246},
+    { 'WY': 0, 'id': 56, 'state': 'Wyoming','num': 42},
     
 
   ]
 
   csv('restaurants.csv', data => {
+    // console.log(data)
     countsArr.forEach(object => {
       if(!isNaN(object[data.province])) {
         object[data.province] += 1
@@ -72,7 +73,6 @@ const svg = select('#container').append('svg')
     })
   })
   
-  // console.log(countsArr)
   // console.log(countsArr.find(el => el.id === 10))
 
   json('https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/counties.json')
@@ -121,6 +121,7 @@ const svg = select('#container').append('svg')
       .append('path')
       .attr('class', 'county')
       .attr('fill', d => colorsScale(countsArr.find(el => Number(el.id) === Number(d.id))['num']))
+      // .attr('fill', d => console.log(d)) // 'd' here is same as 'states' on line 83
       .attr('d', path)
       .style('stroke', 'black')
       .style('stroke-width', '.5')
@@ -134,8 +135,10 @@ const svg = select('#container').append('svg')
       
       
       const counts = countsArr.find(el => Number(el.id) === Number(d.id))['num'];
+      const state = countsArr.find(el => Number(el.id) === Number(d.id))['state'];
 
       tooltip.innerHTML = `
+        <p>State: ${state}</p>
         <p>Count: ${counts}</p>
       `;
 
