@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "server": "nodemon server.js",
-    "start": "webpack --watch"
+    "start": "webpack --watch",
+    "webpack:build": "webpack --config webpack.prod.js --optimize-minimize"
   },
   "author": "",
   "license": "ISC",
