@@ -21,6 +21,7 @@ body {
   height: 100vh;
   flex-direction: column;
   font-family: sans-serif;
+  overflow: hidden;
 }
 
 h1 {
